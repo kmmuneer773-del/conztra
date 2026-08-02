@@ -1,0 +1,4 @@
+# Track only the landing-page project in this repo
+/*
+!/landing-page/
+!.gitignore
