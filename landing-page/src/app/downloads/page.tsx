@@ -15,7 +15,6 @@ export default function DownloadsPage() {
       <Navbar />
       <main>
         <PageHero
-          image="/banners/downloads-hero.jpg"
           label="Resource Center"
           title="Corporate Downloads"
           subtitle="Company profiles, catalogues, and product brochures."

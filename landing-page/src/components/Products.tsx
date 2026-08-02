@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Reveal from "./Reveal";
 import { WhatsAppIcon } from "./Navbar";
@@ -496,6 +496,17 @@ export default function Products() {
   const [selected, setSelected] = useState<Product | null>(null);
   const category = categories[active];
   const back = () => setSelected(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get("category");
+    const idx = categories.findIndex((c) => c.shortName.toLowerCase() === cat);
+    if (idx !== -1) {
+      setActive(idx);
+    }
+    const el = document.getElementById("products");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
 
   return (
     <section id="products" className="relative bg-navy-950 py-24">

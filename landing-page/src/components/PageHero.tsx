@@ -8,7 +8,7 @@ export default function PageHero({
   fullHeight = false,
   scrollHint = false,
 }: {
-  image: string;
+  image?: string;
   label?: string;
   title: string;
   subtitle: string;
@@ -18,7 +18,7 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <Image src={image} alt="" fill priority className="object-cover" />
+        {image && <Image src={image} alt="" fill priority className="object-cover" />}
         <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-900/80 to-navy-950" />
       </div>
 
