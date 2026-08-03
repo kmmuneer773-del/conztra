@@ -30,15 +30,10 @@ const BuildingIcon = (
   </svg>
 );
 
-const FenceIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-fence w-8 h-8 text-current" aria-hidden="true">
-    <path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
-    <path d="M6 8h4" />
-    <path d="M6 18h4" />
-    <path d="m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
-    <path d="M14 8h4" />
-    <path d="M14 18h4" />
-    <path d="m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
+const ShieldIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check w-8 h-8 text-current" aria-hidden="true">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+    <path d="m9 12 2 2 4-4" />
   </svg>
 );
 
@@ -52,7 +47,7 @@ const ArrowRightIcon = (
 const divisions = [
   {
     title: "Equipment Rental & Contracting",
-    image: "/banners/equipment-hero.jpg",
+    image: "/banners/divisions-equipment.jpg",
     description: "Heavy equipment rental and contracting services for construction projects",
     href: "/products?category=equipment",
     services: [
@@ -66,7 +61,7 @@ const divisions = [
   },
   {
     title: "Building Materials Trading",
-    image: "/banners/cement-materials.jpg",
+    image: "/banners/divisions-materials.jpg",
     description: "Premium quality building materials for construction projects",
     href: "/products?category=building",
     services: ["Tile Adhesive", "Wall Plaster", "Dry Mortar", "Gypsum Products"],
@@ -74,13 +69,13 @@ const divisions = [
     icon: BuildingIcon,
   },
   {
-    title: "Precast & Road Barrier Solutions",
-    image: "/banners/precast-solutions.jpg",
-    description: "Precast concrete products and road safety barriers",
-    href: "/products?category=building",
-    services: ["Precast Concrete Products", "Road Barriers", "Jersey Barriers", "Concrete Blocks"],
-    extraServices: ["Crash Barriers", "Concrete Pipes"],
-    icon: FenceIcon,
+    title: "Safety Equipment Trading",
+    image: "/banners/divisions-safety.jpg",
+    description: "Comprehensive personal protective equipment and safety gear",
+    href: "/products?category=uniforms",
+    services: ["PPE & Safety Equipment", "Safety Helmets", "Safety Shoes", "Reflective Jackets"],
+    extraServices: ["Coveralls", "Safety Goggles", "Work Gloves", "Hearing Protection"],
+    icon: ShieldIcon,
   },
 ];
 

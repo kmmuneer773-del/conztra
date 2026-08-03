@@ -101,8 +101,8 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Equipment Rental & Contracting</Link></li>
+              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Safety Equipment Trading</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Building Materials Trading</Link></li>
-              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Precast & Road Barrier Solutions</Link></li>
             </ul>
           </div>
 
