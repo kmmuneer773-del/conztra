@@ -48,7 +48,7 @@ const divisions = [
     title: "Equipment Rental, Contracting & Spare Parts",
     tagline: "Amirah",
     image: "/banners/div-equipment.jpg",
-    mobileImage: "/banners/div-equipment-mobile.jpg",
+
     description: "Heavy equipment rental and contracting services for construction projects",
     href: "/products?category=equipment",
     services: [
@@ -64,7 +64,7 @@ const divisions = [
     title: "Building Materials Trading",
     tagline: "Al Jessour",
     image: "/banners/div-materials.jpg",
-    mobileImage: "/banners/div-materials-mobile.jpg",
+
     description: "Premium quality building materials for construction projects",
     href: "/products?category=building",
     services: ["Tile Adhesive", "Wall Plaster", "Dry Mortar", "Gypsum Products"],
@@ -75,7 +75,7 @@ const divisions = [
     title: "Safety Equipment Trading",
     tagline: "KIWI Trading",
     image: "/banners/div-safety.jpg",
-    mobileImage: "/banners/div-safety-mobile.jpg",
+
     description: "Comprehensive personal protective equipment and safety gear",
     href: "/products?category=uniforms",
     services: ["PPE & Safety Equipment", "Safety Helmets", "Safety Shoes", "Reflective Jackets"],
@@ -164,21 +164,14 @@ export default function Divisions() {
                     </div>
                   </div>
 
-                  <div className="relative order-2 aspect-[3/4] w-full overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-full">
+                  <div className="relative order-2 aspect-video w-full overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-full">
                     <div className="absolute inset-0 lg:clip-diagonal-left">
                       <Image
                         src={division.image}
                         alt={division.title}
                         fill
                         sizes="(min-width: 1024px) 50vw, 100vw"
-                        className="hidden object-cover object-center transition-transform duration-700 group-hover:scale-105 lg:block"
-                      />
-                      <Image
-                        src={division.mobileImage}
-                        alt={division.title}
-                        fill
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105 lg:hidden"
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-navy-950/10 lg:bg-gradient-to-r lg:from-navy-950/40 lg:via-transparent lg:to-navy-950/20" />
