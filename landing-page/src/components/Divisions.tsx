@@ -146,8 +146,8 @@ export default function Divisions() {
                         {division.title}
                       </h3>
                     </div>
-                    <div className="relative order-3 p-5 pt-0 sm:p-12 sm:pt-0">
-                      <p className="mb-4 max-w-md text-xs leading-relaxed text-zinc-400 sm:text-sm sm:mb-7">
+                    <div className="relative order-3 p-5 pt-5 sm:p-12 sm:pt-0">
+                      <p className="mb-4 max-w-md text-xs leading-relaxed font-medium text-zinc-300 sm:text-sm sm:mb-7 lg:font-normal lg:text-zinc-400">
                         {division.description}
                       </p>
                       <ServiceList
