@@ -9,7 +9,7 @@ export default function ProductsPage() {
       <Navbar />
       <main>
         <PageHero
-          image="/banners/equipment-hero.jpg"
+          image="/banners/products-hero-skyline.jpg"
           title="Products & Services"
           subtitle="Explore our three specialised divisions — professional uniforms, building materials and equipment rental — straight from the catalogues."
           fullHeight
