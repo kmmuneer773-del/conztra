@@ -3,31 +3,11 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 
-const stats = [
-  { value: "14+", label: "Years Experience" },
-  { value: "500+", label: "Happy Clients" },
-  { value: "1000+", label: "Products" },
-  { value: "6", label: "GCC Countries" },
-];
-
 const values = [
   { title: "Quality First", description: "We deliver only the highest quality products and services that meet international standards." },
   { title: "Customer Focus", description: "Our clients are at the heart of everything we do. Your success is our success." },
   { title: "Innovation", description: "Continuously improving and adopting new technologies to serve you better." },
   { title: "Integrity", description: "Building trust through honest, transparent, and ethical business practices." },
-];
-
-const journey = [
-  { year: "2010", title: "Foundation", description: "CONZTRA was established in Dubai." },
-  { year: "2014", title: "Equipment Division", description: "Launched heavy equipment rental with a fleet of 50+ machines." },
-  { year: "2016", title: "ISO Certification", description: "Achieved ISO 9001:2015 certification." },
-  { year: "2024", title: "Industry Leadership", description: "500+ satisfied clients across the GCC." },
-];
-
-const certifications = [
-  { title: "ISO 9001:2015", description: "Quality Management System" },
-  { title: "ISO 14001:2015", description: "Environmental Management System" },
-  { title: "OHSAS 18001", description: "Occupational Health and Safety" },
 ];
 
 export default function AboutPage() {
@@ -43,7 +23,7 @@ export default function AboutPage() {
         />
 
         <section className="bg-navy-950 py-24">
-          <div className="mx-auto max-w-4xl px-6">
+          <div className="mx-auto max-w-3xl px-6">
             <Reveal>
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-secondary">
                 Company Profile
@@ -53,28 +33,29 @@ export default function AboutPage() {
               </h2>
             </Reveal>
             <Reveal delay={100}>
-              <p className="mb-8 text-zinc-300">
-                Founded in 2010, CONZTRA has grown from a small trading company
-                into a comprehensive industrial solutions provider serving the
-                entire GCC region — over 500 satisfied clients across
-                construction, infrastructure, oil & gas, and manufacturing.
-              </p>
+              <div className="flex flex-col gap-4 text-zinc-300">
+                <p>
+                  CONZTRA is a UAE-based industrial solutions provider
+                  headquartered in Sharjah, dedicated to supplying the region's
+                  construction, infrastructure, and manufacturing sectors with
+                  reliable materials and equipment. From building materials and
+                  safety apparel to heavy equipment rental, contracting, and
+                  spare parts, we bring together everything a project needs
+                  under one roof — backed by genuine products, dependable
+                  delivery, and a team focused on getting the job done right.
+                </p>
+                <p>
+                  Since our founding, we have grown alongside the UAE's rapid
+                  development, expanding our product range and capabilities to
+                  serve contractors, developers, and industrial clients of all
+                  sizes. Our divisions work as one: a trading operation that
+                  sources quality building materials, a safety equipment arm
+                  that keeps workers protected on site, and an equipment rental
+                  and contracting division that keeps projects moving with the
+                  right machines and support.
+                </p>
+              </div>
             </Reveal>
-
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((stat, i) => (
-                <Reveal key={stat.label} delay={i * 100}>
-                  <div className="rounded-2xl border border-white/10 bg-navy-900 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40">
-                    <p className="font-heading text-3xl font-black text-secondary">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-wider text-zinc-400">
-                      {stat.label}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -117,49 +98,6 @@ export default function AboutPage() {
                   <div className="h-full rounded-2xl border border-white/10 bg-navy-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40">
                     <h3 className="mb-2 font-heading text-lg font-semibold text-white">{value.title}</h3>
                     <p className="text-sm leading-relaxed text-zinc-400">{value.description}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-navy-900 py-24">
-          <div className="mx-auto max-w-5xl px-6">
-            <Reveal className="mb-14 text-center">
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-secondary">Timeline</p>
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Our <span className="text-gold-gradient">Journey</span>
-              </h2>
-            </Reveal>
-            <div className="grid gap-8 md:grid-cols-4">
-              {journey.map((item, i) => (
-                <Reveal key={item.year} delay={i * 100}>
-                  <div className="h-full rounded-2xl border border-white/10 bg-navy-950 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40">
-                    <p className="font-heading text-2xl font-black text-secondary">{item.year}</p>
-                    <h3 className="mb-2 mt-3 font-heading text-lg font-semibold text-white">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-zinc-400">{item.description}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-navy-950 py-24">
-          <div className="mx-auto max-w-7xl px-6">
-            <Reveal className="mb-14 text-center">
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-secondary">Quality Assurance</p>
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                <span className="text-gold-gradient">Certifications</span>
-              </h2>
-            </Reveal>
-            <div className="grid gap-8 md:grid-cols-3">
-              {certifications.map((cert, i) => (
-                <Reveal key={cert.title} delay={i * 100}>
-                  <div className="h-full rounded-2xl border border-white/10 bg-navy-900 p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40">
-                    <h3 className="mb-2 font-heading text-lg font-semibold text-white">{cert.title}</h3>
-                    <p className="text-sm text-zinc-400">{cert.description}</p>
                   </div>
                 </Reveal>
               ))}

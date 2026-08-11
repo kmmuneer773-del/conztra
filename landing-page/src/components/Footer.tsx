@@ -90,7 +90,6 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li><Link href="/about" className="text-sm text-zinc-400 transition-colors hover:text-secondary">About Us</Link></li>
-              <li><Link href="/downloads" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Downloads</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Contact Us</Link></li>
             </ul>
           </div>
@@ -100,7 +99,7 @@ export default function Footer() {
               Industry Offerings
             </h4>
             <ul className="flex flex-col gap-3">
-              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Equipment Rental & Contracting</Link></li>
+              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Equipment Rental, Contracting & Spare Parts</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Safety Equipment Trading</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Building Materials Trading</Link></li>
             </ul>
@@ -111,7 +110,7 @@ export default function Footer() {
               Headquarters
             </h4>
             <ul className="flex flex-col gap-3 text-sm text-zinc-400">
-              <li>Dubai, United Arab Emirates</li>
+              <li>Al Messaned, Al Bataeh, Sharjah, United Arab Emirates</li>
               <li><a href="tel:+97141234567" className="transition-colors hover:text-secondary">+971 4 123 4567</a></li>
               <li><a href="mailto:info@conztra.com" className="transition-colors hover:text-secondary">info@conztra.com</a></li>
               <li className="text-zinc-500">

@@ -83,28 +83,22 @@ body {
   will-change: transform;
 }
 
-.kenburns-active {
-  animation: kenburns 14s ease-in-out infinite;
+.group:hover .kenburns {
+  animation: kenburns 14s ease-out forwards;
 }
 
-.kenburns-reverse-active {
-  animation: kenburns-reverse 14s ease-in-out infinite;
+.group:hover .kenburns-reverse {
+  animation: kenburns-reverse 14s ease-out forwards;
 }
 
 @keyframes cardReveal {
   0% {
     opacity: 0;
-    transform: translateY(64px) scale(0.94);
-    clip-path: inset(0 0 100% 0);
-  }
-  60% {
-    opacity: 1;
-    clip-path: inset(0 0 0% 0);
+    transform: translateY(24px) scale(0.99);
   }
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
-    clip-path: inset(0 0 0% 0);
   }
 }
 
@@ -113,17 +107,18 @@ body {
 }
 
 .card-reveal-active {
-  animation: cardReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: cardReveal 1.4s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.card-reveal-active .badge-pop {
+  animation: badgePop 1.2s ease-out forwards;
 }
 
 @keyframes badgePop {
   0% {
     opacity: 0;
-    transform: scale(0.4);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.15);
+    transform: scale(0.92);
   }
   100% {
     opacity: 1;
@@ -194,6 +189,16 @@ body {
   color: transparent;
 }
 
+.clip-diagonal-left {
+  clip-path: polygon(16% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 1024px) {
+  .lg\:clip-diagonal-left {
+    clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
 .glassmorphism-dark {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
@@ -211,3 +216,5 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* cache-bust 20260804055747 */

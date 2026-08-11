@@ -15,7 +15,7 @@ type FeaturedItem = {
 type Product = {
   name: string;
   image: string;
-  caption: string;
+  caption?: string;
   description: string;
   download: string;
   items: FeaturedItem[];
@@ -32,7 +32,7 @@ type Category = {
 
 const categories: Category[] = [
   {
-    name: "Equipment Rental",
+    name: "Equipment Rental, Contracting & Spare Parts",
     shortName: "Equipment",
     tagline: "Amirah",
     icon: "crane",
@@ -322,27 +322,21 @@ const categories: Category[] = [
     download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
     products: [
       {
-        name: "Doctor Coats",
+        name: "Medical Wears",
         image: "/catalogue/kiwi-medical.jpg",
-        caption: "Medical Wear",
         description:
           "Professional medical wear tailored in premium poly-cotton fabrics.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
         items: [
           {
-            name: "Doctor Coat",
+            name: "Disposable Surgical Gown",
             image: "/products/doctor-coat.jpg",
             detail: "Poly Cotton or Poly Viscose · long sleeves · back slit · 3 pockets",
           },
           {
-            name: "Nurse Jacket",
+            name: "Doctor Coat",
             image: "/products/nurse-jacket.jpg",
             detail: "Poly Viscose · short sleeves · open collar · 2 pockets",
-          },
-          {
-            name: "Nurse Trouser",
-            image: "/products/nurse-trouser.jpg",
-            detail: "Poly Viscose · 2 slant pockets",
           },
           {
             name: "O.T. Scrub Suit",
@@ -352,90 +346,72 @@ const categories: Category[] = [
         ],
       },
       {
-        name: "Chef Jackets",
-        image: "/catalogue/kiwi-hospitality.jpg",
-        caption: "Hospitality Wear",
+        name: "Hospitality Wears",
+        image: "/catalogue/kiwi-hospitality-chef.jpg",
         description:
           "Chef wear and restaurant uniforms for professional kitchens.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
         items: [
           {
             name: "Chef Jacket",
-            image: "/products/chef-jacket.jpg",
+            image: "/products/chef-jacket-new.jpg",
             detail: "Poly Cotton · long sleeves · double chest · 10 buttons",
           },
           {
-            name: "Shirt Waiter",
-            image: "/products/shirt-waiter.jpg",
+            name: "Banquet Waiter Uniform",
+            image: "/products/banquet-waiter.jpg",
             detail: "Poly Cotton · long sleeves with piping",
           },
           {
-            name: "Shirt Waitress",
+            name: "Waitstaff Uniform Set",
             image: "/products/shirt-waitress.jpg",
             detail: "Poly Cotton · long sleeves with piping",
-          },
-          {
-            name: "Skirt",
-            image: "/products/skirt-hosp.jpg",
-            detail: "Poly Viscose / Wool · knee length · back zip opening",
           },
         ],
       },
       {
-        name: "Executive Suits",
-        image: "/catalogue/kiwi-corporate.jpg",
-        caption: "Corporate Wear",
+        name: "Corporate Wears",
+        image: "/catalogue/kiwi-corporate-v5.jpg",
         description:
           "Tailored corporate and executive wear for a sharp professional look.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
         items: [
           {
-            name: "Jacket (Male)",
+            name: "Business Professional Attire",
             image: "/products/jacket-male.jpg",
             detail: "Poly Wool · long sleeves · single breast · 2 buttons",
           },
           {
-            name: "Trouser (Male)",
-            image: "/products/trouser-male.jpg",
-            detail: "Poly Wool · pleatless front · 2 slant + 1 back pocket",
-          },
-          {
-            name: "Jacket (Female)",
+            name: "Shirt (Pilot)",
             image: "/products/jacket-female.jpg",
-            detail: "Poly Wool · 1 button · suit collar · 2 pockets",
+            detail: "Poly Cotton · single pocket · half sleeve with epaulettes",
           },
           {
-            name: "Skirt",
+            name: "Suit Jacket",
             image: "/products/skirt-corp.jpg",
-            detail: "Poly Wool · pencil cut",
+            detail: "Poly Wool · 1 button · suit collar · 2 pockets",
           },
         ],
       },
       {
-        name: "Construction Uniforms",
-        image: "/catalogue/kiwi-construction.jpg",
-        caption: "Construction Wear",
+        name: "Construction Wears",
+        image: "/catalogue/kiwi-construction-new.jpg",
         description:
           "Durable safety and construction workwear built for the job site.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
         items: [
           {
-            name: "Reflective Safety Jacket",
+            name: "Security Shirt (Long Sleeve)",
             image: "/products/security-jacket.jpg",
             detail: "Poly Viscose / Wool · long sleeves · epaulettes · 2 pockets",
           },
           {
-            name: "Coveralls",
-            image: "/products/coveralls.jpg",
-            detail: "Poly Cotton / Twill · fire retardant option · reflector",
-          },
-          {
-            name: "Technician Shirt",
+            name: "Construction Overalls",
             image: "/products/technician-shirt.jpg",
             detail: "Poly Cotton / Twill · short sleeves · 2 pocket flaps",
           },
           {
-            name: "Cargo Trouser",
+            name: "Coveralls",
             image: "/products/cargo-trouser.jpg",
             detail: "Poly Cotton / Twill · 6 pockets",
           },
@@ -559,7 +535,8 @@ export default function Products() {
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-wider text-secondary">
-                    {category.tagline} · {selected.caption}
+                    {category.tagline}
+                    {selected.caption ? <span> · {selected.caption}</span> : null}
                   </p>
                   <h3 className="mt-1 font-heading text-2xl font-bold text-white sm:text-3xl">
                     {selected.name}
@@ -663,9 +640,11 @@ export default function Products() {
                     <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary backdrop-blur-sm">
                       {category.tagline}
                     </span>
-                    <span className="absolute bottom-3 left-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
-                      {product.caption}
-                    </span>
+                    {product.caption ? (
+                      <span className="absolute bottom-3 left-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                        {product.caption}
+                      </span>
+                    ) : null}
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">

@@ -1,25 +1,56 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
 import { WhatsAppIcon } from "./Navbar";
 
-const highlights = [
-  "ISO 9001 Certified",
-  "30,000+ Products",
-  "24/7 Support",
-];
-
 export default function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(true);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.05 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const bgStyle = inView
+    ? {
+        animation: "slowZoom 24s ease-in-out infinite alternate",
+        willChange: "transform",
+      }
+    : { willChange: "transform" };
+
+  const glowStyle = inView
+    ? {
+        animation: "floatGlow 8s ease-in-out infinite",
+        willChange: "transform, opacity",
+      }
+    : { willChange: "transform, opacity" };
+
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section
+      ref={ref}
+      className="relative flex min-h-screen items-center overflow-hidden"
+    >
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/banners/equipment-hero.jpg"
-          alt="Heavy construction equipment"
+          src="/banners/construction-dubai-hero-v2.jpg"
+          alt="Skyscraper under construction in Dubai"
           fill
           priority
           className="object-cover"
-          style={{ animation: "slowZoom 24s ease-in-out infinite alternate" }}
+          style={bgStyle}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/40" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy-950 to-transparent" />
@@ -27,7 +58,7 @@ export default function Hero() {
 
       <div
         className="absolute -left-20 top-1/3 -z-10 h-[420px] w-[420px] rounded-full bg-secondary/10 blur-[120px]"
-        style={{ animation: "floatGlow 8s ease-in-out infinite" }}
+        style={glowStyle}
       />
 
       <div className="mx-auto w-full max-w-7xl px-6 pt-28 pb-24">
@@ -75,30 +106,6 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          <Reveal delay={500}>
-            <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-white/10 pt-8">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-center gap-2.5">
-                  <svg
-                    className="h-5 w-5 shrink-0 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span className="text-sm font-medium text-zinc-300">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>

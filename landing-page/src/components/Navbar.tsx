@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/downloads", label: "Downloads" },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
@@ -35,14 +34,12 @@ export default function Navbar() {
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/10 bg-navy-950/95 shadow-lg shadow-black/30 backdrop-blur-md"
+          ? "border-b border-white/10 bg-navy-950/90 shadow-lg shadow-black/30 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       } ${mounted ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"}`}
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-500 sm:px-6 lg:px-8 ${
-          scrolled ? "h-16" : "h-20"
-        }`}
+        className="relative mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
         <Link href="/" className="group flex items-center space-x-3">
           <Image
@@ -63,7 +60,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden items-center space-x-8 lg:flex">
+        <div className="hidden items-center space-x-8 lg:flex lg:mr-16">
           {links.map((link) => {
             const hrefPath = link.href.split("#")[0];
             const active =
@@ -72,8 +69,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative py-2 text-sm font-medium uppercase tracking-wide transition-colors hover:text-secondary ${
-                  active ? "text-secondary" : "text-white/90"
+                className={`relative py-2 font-heading text-base font-bold uppercase tracking-wide transition-colors hover:text-yellow-400 ${
+                  active ? "text-secondary" : "text-white/80"
                 }`}
               >
                 {link.label}
@@ -106,7 +103,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium uppercase tracking-wide text-white/90 hover:text-secondary"
+              className="font-heading text-sm font-semibold uppercase tracking-wide text-white/80 hover:text-secondary"
             >
               {link.label}
             </Link>
