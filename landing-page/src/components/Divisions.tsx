@@ -157,14 +157,14 @@ export default function Divisions() {
                     </Link>
                   </div>
 
-                  <div className="relative min-h-[200px] overflow-hidden lg:min-h-full">
+                  <div className="relative min-h-[200px] overflow-hidden bg-navy-800 lg:min-h-full">
                     <div className="absolute inset-0 lg:clip-diagonal-left">
                       <Image
                         src={division.image}
                         alt={division.title}
                         fill
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 50vw, 50vw"
+                        className="object-contain object-center p-2 transition-transform duration-700 group-hover:scale-105 lg:object-cover lg:p-0"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-navy-950/10 lg:bg-gradient-to-r lg:from-navy-950/40 lg:via-transparent lg:to-navy-950/20" />
