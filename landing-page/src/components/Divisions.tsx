@@ -125,8 +125,8 @@ export default function Divisions() {
             <Reveal key={division.title} delay={0}>
               <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-navy-900 shadow-2xl shadow-black/40 transition-all duration-500 hover:border-secondary/40">
                 <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1 bg-gradient-to-b from-secondary via-yellow-500 to-secondary opacity-70 lg:block" />
-                <div className="grid grid-cols-2 items-stretch">
-                  <div className="relative flex flex-col justify-center p-5 sm:p-8 lg:p-12">
+                <div className="grid items-stretch lg:grid-cols-2">
+                  <div className="relative order-2 flex flex-col justify-center p-8 sm:p-12 lg:order-1">
                     <span className="pointer-events-none absolute right-8 top-8 hidden font-heading text-6xl font-black text-white/5 sm:block">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -157,13 +157,13 @@ export default function Divisions() {
                     </Link>
                   </div>
 
-                  <div className="relative order-1 min-h-full overflow-hidden lg:order-2">
+                  <div className="relative order-1 aspect-video w-full overflow-hidden bg-navy-800 lg:order-2 lg:aspect-auto lg:min-h-full">
                     <div className="absolute inset-0 lg:clip-diagonal-left">
                       <Image
                         src={division.image}
                         alt={division.title}
                         fill
-                        sizes="(min-width: 1024px) 50vw, 50vw"
+                        sizes="(min-width: 1024px) 50vw, 100vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
