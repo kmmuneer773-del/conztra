@@ -125,23 +125,23 @@ export default function Divisions() {
             <Reveal key={division.title} delay={0}>
               <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-navy-900 shadow-2xl shadow-black/40 transition-all duration-500 hover:border-secondary/40">
                 <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1 bg-gradient-to-b from-secondary via-yellow-500 to-secondary opacity-70 lg:block" />
-                <div className="grid items-stretch lg:grid-cols-2">
-                  <div className="relative order-2 flex flex-col justify-center p-8 sm:p-12 lg:order-1">
+                <div className="grid grid-cols-2 items-stretch">
+                  <div className="relative flex flex-col justify-center p-5 sm:p-8 lg:p-12">
                     <span className="pointer-events-none absolute right-8 top-8 hidden font-heading text-6xl font-black text-white/5 sm:block">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <div className="mb-5 flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/40 bg-navy-950 text-secondary">
+                    <div className="mb-4 flex items-center gap-2 sm:gap-4">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-secondary/40 bg-navy-950 text-secondary sm:h-12 sm:w-12">
                         {division.icon}
                       </div>
-                      <span className="text-xs font-bold uppercase tracking-[0.35em] text-secondary">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-secondary sm:text-xs sm:tracking-[0.35em]">
                         {division.tagline}
                       </span>
                     </div>
-                    <h3 className="mb-4 font-heading text-2xl font-black uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-secondary sm:text-3xl">
+                    <h3 className="mb-3 font-heading text-base font-black uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-secondary sm:text-2xl lg:text-3xl">
                       {division.title}
                     </h3>
-                    <p className="mb-7 max-w-md text-zinc-400">
+                    <p className="mb-5 max-w-md text-xs text-zinc-400 sm:text-sm sm:mb-7">
                       {division.description}
                     </p>
                     <ServiceList
@@ -150,14 +150,14 @@ export default function Divisions() {
                     />
                     <Link
                       href={division.href}
-                      className="group/link mt-8 inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 px-6 py-3 text-sm font-black uppercase tracking-[0.2em] text-primary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/25"
+                      className="group/link mt-5 inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-primary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/25 sm:mt-8 sm:px-6 sm:py-3 sm:text-sm"
                     >
                       <span>Explore Division</span>
                       {ArrowRightIcon}
                     </Link>
                   </div>
 
-                  <div className="relative order-1 min-h-[280px] overflow-hidden lg:order-2 lg:min-h-full">
+                  <div className="relative min-h-[200px] overflow-hidden lg:min-h-full">
                     <div className="absolute inset-0 lg:clip-diagonal-left">
                       <Image
                         src={division.image}
