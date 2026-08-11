@@ -12,14 +12,14 @@ export default function ServiceList({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mb-6">
-      <p className="mb-3 text-xs font-bold uppercase tracking-wider text-zinc-500">
+    <div className="mb-4 sm:mb-6">
+      <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-zinc-500 sm:mb-3 sm:text-xs">
         Key Services
       </p>
       <ul className="space-y-1.5 sm:space-y-2">
         {services.map((service) => (
-          <li key={service} className="flex items-center text-xs text-zinc-300 sm:text-sm">
-            <span className="mr-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+          <li key={service} className="flex items-start text-[11px] leading-snug text-zinc-300 sm:items-center sm:text-sm">
+            <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary sm:mt-0" />
             {service}
           </li>
         ))}
@@ -29,8 +29,8 @@ export default function ServiceList({
         >
           <ul className="min-h-0 overflow-hidden space-y-1.5 sm:space-y-2">
             {extraServices.map((service) => (
-              <li key={service} className="flex items-center text-xs text-zinc-300 sm:text-sm">
-                <span className="mr-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+              <li key={service} className="flex items-start text-[11px] leading-snug text-zinc-300 sm:items-center sm:text-sm">
+                <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary sm:mt-0" />
                 {service}
               </li>
             ))}
@@ -41,7 +41,7 @@ export default function ServiceList({
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-secondary transition-colors hover:text-yellow-400 sm:text-sm"
+          className="mt-2.5 flex items-center gap-1.5 text-[11px] font-semibold text-secondary transition-colors hover:text-yellow-400 sm:mt-3 sm:text-sm"
           aria-expanded={open}
         >
           {open ? "−" : "+"}
