@@ -128,52 +128,56 @@ export default function Divisions() {
             <Reveal key={division.title} delay={0}>
               <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-navy-900 shadow-2xl shadow-black/40 transition-all duration-500 hover:border-secondary/40">
                 <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1 bg-gradient-to-b from-secondary via-yellow-500 to-secondary opacity-70 lg:block" />
-                <div className="grid grid-cols-2 items-stretch">
-                  <div className="relative flex flex-col justify-center p-4 sm:p-12 lg:order-1">
-                    <span className="pointer-events-none absolute right-8 top-8 hidden font-heading text-6xl font-black text-white/5 sm:block">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="mb-3 flex items-center gap-2 sm:mb-4 sm:gap-4">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-secondary/40 bg-navy-950 text-secondary sm:h-12 sm:w-12">
-                        {division.icon}
-                      </div>
-                      <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-secondary sm:text-xs sm:tracking-[0.35em]">
-                        {division.tagline}
+                <div className="grid items-stretch lg:grid-cols-2">
+                  <div className="contents lg:order-1 lg:flex lg:flex-col lg:justify-center">
+                    <div className="relative order-1 p-5 pb-3 sm:p-12 sm:pb-4">
+                      <span className="pointer-events-none absolute right-8 top-8 hidden font-heading text-6xl font-black text-white/5 sm:block">
+                        {String(i + 1).padStart(2, "0")}
                       </span>
+                      <div className="mb-3 flex items-center gap-2 sm:mb-4 sm:gap-4">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-secondary/40 bg-navy-950 text-secondary sm:h-12 sm:w-12">
+                          {division.icon}
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-secondary sm:text-xs sm:tracking-[0.35em]">
+                          {division.tagline}
+                        </span>
+                      </div>
+                      <h3 className="font-heading text-base font-black uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-secondary sm:text-2xl lg:text-3xl">
+                        {division.title}
+                      </h3>
                     </div>
-                    <h3 className="mb-3 font-heading text-sm font-black uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-secondary sm:text-2xl lg:text-3xl">
-                      {division.title}
-                    </h3>
-                    <p className="mb-4 max-w-md text-[11px] leading-relaxed text-zinc-400 sm:text-sm sm:mb-7">
-                      {division.description}
-                    </p>
-                    <ServiceList
-                      services={division.services}
-                      extraServices={division.extraServices}
-                    />
-                    <Link
-                      href={division.href}
-                      className="group/link mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] text-primary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/25 sm:mt-8 sm:w-fit sm:px-6 sm:py-3 sm:text-sm"
-                    >
-                      <span>Explore Division</span>
-                      {ArrowRightIcon}
-                    </Link>
+                    <div className="relative order-3 p-5 pt-0 sm:p-12 sm:pt-0">
+                      <p className="mb-4 max-w-md text-xs leading-relaxed text-zinc-400 sm:text-sm sm:mb-7">
+                        {division.description}
+                      </p>
+                      <ServiceList
+                        services={division.services}
+                        extraServices={division.extraServices}
+                      />
+                      <Link
+                        href={division.href}
+                        className="group/link mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-yellow-500 px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.2em] text-primary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/25 sm:mt-8 sm:w-fit sm:px-6 sm:py-3 sm:text-sm"
+                      >
+                        <span>Explore Division</span>
+                        {ArrowRightIcon}
+                      </Link>
+                    </div>
                   </div>
 
-                  <div className="relative order-2 aspect-[3/4] w-full self-center overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-full lg:self-stretch">
+                  <div className="relative order-2 aspect-[3/4] w-full overflow-hidden lg:order-2 lg:aspect-auto lg:min-h-full">
                     <div className="absolute inset-0 lg:clip-diagonal-left">
                       <Image
                         src={division.image}
                         alt={division.title}
                         fill
-                        sizes="(min-width: 1024px) 50vw, 50vw"
+                        sizes="(min-width: 1024px) 50vw, 100vw"
                         className="hidden object-cover object-center transition-transform duration-700 group-hover:scale-105 lg:block"
                       />
                       <Image
                         src={division.mobileImage}
                         alt={division.title}
                         fill
-                        sizes="(min-width: 1024px) 50vw, 50vw"
+                        sizes="(min-width: 1024px) 50vw, 100vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-105 lg:hidden"
                       />
                     </div>
