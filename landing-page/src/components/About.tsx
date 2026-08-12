@@ -25,9 +25,6 @@ export default function About() {
     <section className="bg-navy-950 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-14 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-secondary">
-            Who We Are
-          </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
             About <span className="text-gold-gradient">CONZTRA</span>
           </h2>

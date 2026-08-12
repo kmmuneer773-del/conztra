@@ -27,11 +27,8 @@ export default function WhyChoose() {
     <section className="bg-navy-900 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="mb-14 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-secondary">
-            The CONZTRA Advantage
-          </p>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Why Choose <span className="text-gold-gradient">CONZTRA</span>
+            Why <span className="text-gold-gradient">CONZTRA</span>
           </h2>
           <div className="mx-auto mt-5 h-0.5 w-20 rounded-full bg-gradient-to-r from-secondary to-transparent" />
         </Reveal>

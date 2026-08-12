@@ -45,8 +45,27 @@ const ArrowRightIcon = (
 
 const divisions = [
   {
-    title: "Equipment Rental, Contracting & Spare Parts",
-    tagline: "Amirah",
+    title: "Safety Equipment Trading",
+    image: "/banners/div-safety.jpg",
+
+    description: "Comprehensive personal protective equipment and safety gear",
+    href: "/products?category=uniforms",
+    services: ["PPE & Safety Equipment", "Safety Helmets", "Safety Shoes", "Reflective Jackets"],
+    extraServices: ["Coveralls", "Safety Goggles", "Work Gloves", "Hearing Protection"],
+    icon: ShieldIcon,
+  },
+  {
+    title: "Building Materials Trading",
+    image: "/banners/div-materials.jpg",
+
+    description: "Premium quality building materials for construction projects",
+    href: "/products?category=building",
+    services: ["Tile Adhesive", "Wall Plaster", "Dry Mortar", "Gypsum Products"],
+    extraServices: ["Steel & Rebar", "Cement & Mortars", "Plywood & MDF", "Paints & Coatings"],
+    icon: BuildingIcon,
+  },
+  {
+    title: "Equipment Rental & Spare Parts",
     image: "/banners/div-equipment.jpg",
 
     description: "Heavy equipment rental and contracting services for construction projects",
@@ -59,28 +78,6 @@ const divisions = [
     ],
     extraServices: ["Aerial Work Platforms", "Generators & Lighting"],
     icon: TruckIcon,
-  },
-  {
-    title: "Building Materials Trading",
-    tagline: "Al Jessour",
-    image: "/banners/div-materials.jpg",
-
-    description: "Premium quality building materials for construction projects",
-    href: "/products?category=building",
-    services: ["Tile Adhesive", "Wall Plaster", "Dry Mortar", "Gypsum Products"],
-    extraServices: ["Steel & Rebar", "Cement & Mortars", "Plywood & MDF", "Paints & Coatings"],
-    icon: BuildingIcon,
-  },
-  {
-    title: "Safety Equipment Trading",
-    tagline: "KIWI Trading",
-    image: "/banners/div-safety.jpg",
-
-    description: "Comprehensive personal protective equipment and safety gear",
-    href: "/products?category=uniforms",
-    services: ["PPE & Safety Equipment", "Safety Helmets", "Safety Shoes", "Reflective Jackets"],
-    extraServices: ["Coveralls", "Safety Goggles", "Work Gloves", "Hearing Protection"],
-    icon: ShieldIcon,
   },
 ];
 
@@ -99,13 +96,8 @@ export default function Divisions() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
           <Reveal delay={0}>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-secondary">
-              What We Offer
-            </p>
-          </Reveal>
-          <Reveal delay={120}>
             <h2 className="font-heading text-4xl font-black uppercase leading-none tracking-tight text-white sm:text-5xl">
-              Our Core Business <span className="text-gold-gradient">Divisions</span>
+              Our <span className="text-gold-gradient">Divisions</span>
             </h2>
           </Reveal>
           <Reveal delay={240}>
@@ -134,13 +126,10 @@ export default function Divisions() {
                       <span className="pointer-events-none absolute right-8 top-8 hidden font-heading text-6xl font-black text-white/5 sm:block">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <div className="mb-3 flex items-center gap-2 sm:mb-4 sm:gap-4">
+                      <div className="mb-3 flex items-center sm:mb-4">
                         <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-secondary/40 bg-navy-950 text-secondary sm:h-12 sm:w-12">
                           {division.icon}
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-secondary sm:text-xs sm:tracking-[0.35em]">
-                          {division.tagline}
-                        </span>
                       </div>
                       <h3 className="font-heading text-base font-black uppercase leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-secondary sm:text-2xl lg:text-3xl">
                         {division.title}

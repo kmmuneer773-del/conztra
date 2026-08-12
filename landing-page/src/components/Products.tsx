@@ -24,7 +24,6 @@ type Product = {
 type Category = {
   name: string;
   shortName: string;
-  tagline: string;
   icon: string;
   download: string;
   products: Product[];
@@ -32,9 +31,8 @@ type Category = {
 
 const categories: Category[] = [
   {
-    name: "Equipment Rental, Contracting & Spare Parts",
+    name: "Equipment Rental & Spare Parts",
     shortName: "Equipment",
-    tagline: "Amirah",
     icon: "crane",
     download: "/downloads/Amirah-Brochure.pdf",
     products: [
@@ -188,7 +186,6 @@ const categories: Category[] = [
   {
     name: "Building Materials",
     shortName: "Building",
-    tagline: "Al Jessour",
     icon: "building",
     download: "/downloads/al-jessur-catalogue.pdf",
     products: [
@@ -224,7 +221,7 @@ const categories: Category[] = [
       },
       {
         name: "Cement & Mortars",
-        image: "/catalogue/aljessour-cement.jpg",
+        image: "/downloads/cements.png",
         caption: "Cement & Mortars",
         description:
           "Portland cement and ready-to-use mortars from authorised brands.",
@@ -232,22 +229,22 @@ const categories: Category[] = [
         items: [
           {
             name: "OPC",
-            image: "/products/cement-opc.jpg",
+            image: "/downloads/opc.png",
             detail: "Ordinary Portland Cement · 50 kg",
           },
           {
             name: "SRC",
-            image: "/products/cement-src.jpg",
+            image: "/downloads/src.png",
             detail: "Sulphate Resisting Portland Cement · 50 kg",
           },
           {
             name: "Rushcoat 510",
-            image: "/products/cement-rushcoat.jpg",
+            image: "/downloads/rushcoat.png",
             detail: "Premix plaster",
           },
           {
             name: "Tile Fix 700",
-            image: "/products/cement-tilefix.jpg",
+            image: "/downloads/tilefix.png",
             detail: "Tile adhesive",
           },
         ],
@@ -259,28 +256,7 @@ const categories: Category[] = [
         description:
           "Commercial, film-face and marine plywood in standard sizes.",
         download: "/downloads/al-jessur-catalogue.pdf",
-        items: [
-          {
-            name: "Commercial Plywood",
-            image: "/products/ply-commercial.jpg",
-            detail: "4 / 6 / 9 / 12 / 15 / 18 mm",
-          },
-          {
-            name: "Film Face Plywood",
-            image: "/products/ply-filmface.jpg",
-            detail: "12 / 18 mm · 1220 x 2440 mm",
-          },
-          {
-            name: "PVC Coated Film Face",
-            image: "/products/ply-pvc.jpg",
-            detail: "18 mm · Viva Max Silver / Gold",
-          },
-          {
-            name: "PVC Laminated Plywood",
-            image: "/products/ply-laminated.jpg",
-            detail: "18 mm",
-          },
-        ],
+        items: [],
       },
       {
         name: "Paints & Coatings",
@@ -289,61 +265,31 @@ const categories: Category[] = [
         description:
           "Interior and exterior paints and coatings from Jotun and National Paints.",
         download: "/downloads/al-jessur-catalogue.pdf",
-        items: [
-          {
-            name: "Fenomastic",
-            image: "/products/paint-fenomastic.jpg",
-            detail: "Jotun interior / exterior emulsion",
-          },
-          {
-            name: "Easycoat",
-            image: "/products/paint-easycoat.jpg",
-            detail: "Jotun interior emulsion",
-          },
-          {
-            name: "Jotashield",
-            image: "/products/paint-jotashield.jpg",
-            detail: "Jotun exterior protective coating",
-          },
-          {
-            name: "Rich Matt",
-            image: "/products/paint-richmatt.jpg",
-            detail: "Jotun decorative interior",
-          },
-        ],
+        items: [],
       },
     ],
   },
   {
     name: "Uniforms & Safety Apparel",
     shortName: "Uniforms",
-    tagline: "KIWI Trading",
     icon: "uniform",
     download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
     products: [
+      {
+        name: "Construction & Industrial Wears",
+        image: "/catalogue/kiwi-construction-new.jpg",
+        description:
+          "Durable safety and construction workwear built for the job site.",
+        download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
+        items: [],
+      },
       {
         name: "Medical Wears",
         image: "/catalogue/kiwi-medical.jpg",
         description:
           "Professional medical wear tailored in premium poly-cotton fabrics.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
-        items: [
-          {
-            name: "Disposable Surgical Gown",
-            image: "/products/doctor-coat.jpg",
-            detail: "Poly Cotton or Poly Viscose · long sleeves · back slit · 3 pockets",
-          },
-          {
-            name: "Doctor Coat",
-            image: "/products/nurse-jacket.jpg",
-            detail: "Poly Viscose · short sleeves · open collar · 2 pockets",
-          },
-          {
-            name: "O.T. Scrub Suit",
-            image: "/products/scrub-suit.jpg",
-            detail: "100% cotton · short sleeves · V neck · 2 hip pockets",
-          },
-        ],
+        items: [],
       },
       {
         name: "Hospitality Wears",
@@ -351,23 +297,7 @@ const categories: Category[] = [
         description:
           "Chef wear and restaurant uniforms for professional kitchens.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
-        items: [
-          {
-            name: "Chef Jacket",
-            image: "/products/chef-jacket-new.jpg",
-            detail: "Poly Cotton · long sleeves · double chest · 10 buttons",
-          },
-          {
-            name: "Banquet Waiter Uniform",
-            image: "/products/banquet-waiter.jpg",
-            detail: "Poly Cotton · long sleeves with piping",
-          },
-          {
-            name: "Waitstaff Uniform Set",
-            image: "/products/shirt-waitress.jpg",
-            detail: "Poly Cotton · long sleeves with piping",
-          },
-        ],
+        items: [],
       },
       {
         name: "Corporate Wears",
@@ -375,47 +305,7 @@ const categories: Category[] = [
         description:
           "Tailored corporate and executive wear for a sharp professional look.",
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
-        items: [
-          {
-            name: "Business Professional Attire",
-            image: "/products/jacket-male.jpg",
-            detail: "Poly Wool · long sleeves · single breast · 2 buttons",
-          },
-          {
-            name: "Shirt (Pilot)",
-            image: "/products/jacket-female.jpg",
-            detail: "Poly Cotton · single pocket · half sleeve with epaulettes",
-          },
-          {
-            name: "Suit Jacket",
-            image: "/products/skirt-corp.jpg",
-            detail: "Poly Wool · 1 button · suit collar · 2 pockets",
-          },
-        ],
-      },
-      {
-        name: "Construction Wears",
-        image: "/catalogue/kiwi-construction-new.jpg",
-        description:
-          "Durable safety and construction workwear built for the job site.",
-        download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
-        items: [
-          {
-            name: "Security Shirt (Long Sleeve)",
-            image: "/products/security-jacket.jpg",
-            detail: "Poly Viscose / Wool · long sleeves · epaulettes · 2 pockets",
-          },
-          {
-            name: "Construction Overalls",
-            image: "/products/technician-shirt.jpg",
-            detail: "Poly Cotton / Twill · short sleeves · 2 pocket flaps",
-          },
-          {
-            name: "Coveralls",
-            image: "/products/cargo-trouser.jpg",
-            detail: "Poly Cotton / Twill · 6 pockets",
-          },
-        ],
+        items: [],
       },
     ],
   },
@@ -471,7 +361,6 @@ export default function Products() {
   const [active, setActive] = useState(0);
   const [selected, setSelected] = useState<Product | null>(null);
   const category = categories[active];
-  const back = () => setSelected(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -480,9 +369,52 @@ export default function Products() {
     if (idx !== -1) {
       setActive(idx);
     }
+    const productName = params.get("product");
+    if (productName) {
+      const product = categories
+        .flatMap((c) => c.products)
+        .find((p) => p.name === productName);
+      if (product && product.items.length > 0) {
+        setSelected(product);
+      }
+    }
     const el = document.getElementById("products");
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
+
+  useEffect(() => {
+    const onPopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const productName = params.get("product");
+      if (productName) {
+        const product = categories
+          .flatMap((c) => c.products)
+          .find((p) => p.name === productName);
+        if (product && product.items.length > 0) {
+          setSelected(product);
+          return;
+        }
+      }
+      setSelected(null);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  const selectProduct = (product: Product) => {
+    setSelected(product);
+    const params = new URLSearchParams(window.location.search);
+    params.set("product", product.name);
+    window.history.pushState(null, "", `${window.location.pathname}?${params.toString()}`);
+  };
+
+  const back = () => {
+    setSelected(null);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("product");
+    const qs = params.toString();
+    window.history.replaceState(null, "", `${window.location.pathname}${qs ? "?" + qs : ""}`);
+  };
 
   return (
     <section id="products" className="relative bg-navy-950 py-24">
@@ -505,6 +437,10 @@ export default function Products() {
               onClick={() => {
                 setActive(i);
                 setSelected(null);
+                const params = new URLSearchParams(window.location.search);
+                params.delete("product");
+                const qs = params.toString();
+                window.history.replaceState(null, "", `${window.location.pathname}${qs ? "?" + qs : ""}`);
               }}
               className={
                 "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors " +
@@ -522,6 +458,7 @@ export default function Products() {
         {selected ? (
           <div>
             <button
+              type="button"
               onClick={back}
               className="mb-6 flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-yellow-400"
             >
@@ -535,8 +472,7 @@ export default function Products() {
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-wider text-secondary">
-                    {category.tagline}
-                    {selected.caption ? <span> · {selected.caption}</span> : null}
+                    {selected.caption}
                   </p>
                   <h3 className="mt-1 font-heading text-2xl font-bold text-white sm:text-3xl">
                     {selected.name}
@@ -574,9 +510,6 @@ export default function Products() {
                         sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
-                      <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary backdrop-blur-sm">
-                        {category.tagline}
-                      </span>
                     </div>
 
                     <div className="flex flex-1 flex-col p-5">
@@ -624,10 +557,7 @@ export default function Products() {
           <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
             {category.products.map((product, pi) => (
               <Reveal key={product.name} delay={pi * 100}>
-                <button
-                  onClick={() => setSelected(product)}
-                  className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-900 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-secondary/40 hover:shadow-xl hover:shadow-black/30"
-                >
+                <div className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-900 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-secondary/40 hover:shadow-xl hover:shadow-black/30">
                   <div className="relative block aspect-[4/3] overflow-hidden">
                     <Image
                       src={product.image}
@@ -637,9 +567,6 @@ export default function Products() {
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent" />
-                    <span className="absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary backdrop-blur-sm">
-                      {category.tagline}
-                    </span>
                     {product.caption ? (
                       <span className="absolute bottom-3 left-3 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                         {product.caption}
@@ -653,12 +580,25 @@ export default function Products() {
                     </h4>
                     <p className="mb-5 text-xs leading-relaxed text-zinc-400">{product.description}</p>
                     <div className="mt-auto flex items-center gap-2">
-                      <span className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-secondary py-2 text-xs font-semibold text-primary transition-colors group-hover:bg-yellow-500">
-                        View {product.items.length} {product.items.length === 1 ? "Item" : "Items"}
-                        <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
+                      {product.items.length > 0 ? (
+                        <button
+                          type="button"
+                          onClick={() => selectProduct(product)}
+                          className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-secondary py-2 text-xs font-semibold text-primary transition-colors hover:bg-yellow-500"
+                        >
+                          View {product.items.length} {product.items.length === 1 ? "Item" : "Items"}
+                          <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      ) : (
+                        <Link
+                          href="/contact"
+                          className="flex flex-1 items-center justify-center rounded-lg border border-white/15 py-2 text-xs font-semibold text-white transition-colors hover:border-secondary/50 hover:text-secondary"
+                        >
+                          Request a Quote
+                        </Link>
+                      )}
                       <a
                         href={product.download}
                         target="_blank"
@@ -676,7 +616,7 @@ export default function Products() {
                       </a>
                     </div>
                   </div>
-                </button>
+                </div>
               </Reveal>
             ))}
           </div>

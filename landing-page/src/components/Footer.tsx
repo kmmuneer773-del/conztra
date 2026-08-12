@@ -99,7 +99,7 @@ export default function Footer() {
               Industry Offerings
             </h4>
             <ul className="flex flex-col gap-3">
-              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Equipment Rental, Contracting & Spare Parts</Link></li>
+              <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Equipment Rental & Spare Parts</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Safety Equipment Trading</Link></li>
               <li><Link href="/contact" className="text-sm text-zinc-400 transition-colors hover:text-secondary">Building Materials Trading</Link></li>
             </ul>
