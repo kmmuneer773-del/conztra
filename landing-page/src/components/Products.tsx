@@ -38,7 +38,7 @@ const categories: Category[] = [
     products: [
       {
         name: "Cranes",
-        image: "/catalogue/amirah-crane.jpg",
+        image: "/products/equip-cranes-v2.png",
         caption: "Crane Rental",
         description:
           "Heavy-duty lifting solutions for engineering and turnkey projects.",
@@ -63,123 +63,75 @@ const categories: Category[] = [
       },
       {
         name: "Excavators",
-        image: "/catalogue/amirah-excavator.jpg",
+        image: "/products/equip-excavators.png",
         caption: "Excavators",
         description:
           "High-performance excavators from our rental fleet for earthmoving and excavation.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Excavator",
-            image: "/products/excavator.jpg",
-            detail: "CASE CX220C / ZE215E · earthmoving & excavation",
-          },
-        ],
+        items: [],
       },
       {
         name: "Dozers",
-        image: "/catalogue/amirah-dozer.jpg",
+        image: "/products/equip-dozers.png",
         caption: "Dozers",
         description:
           "CAT and Komatsu dozers for grading, levelling and site preparation.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Caterpillar & Komatsu Dozer",
-            image: "/products/dozer.jpg",
-            detail: "D4–D9 / D65–D155 · 62–306 kW · 8,147–47,872 kg",
-          },
-        ],
+        items: [],
       },
       {
         name: "Wheel Loaders",
-        image: "/products/wheelloader.jpg",
+        image: "/products/equip-wheel-loaders.png",
         caption: "Wheel Loaders",
         description:
           "Productive loaders for construction sites, quarries and mines.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Wheel Loader 82YF",
-            image: "/products/wheelloader.jpg",
-            detail: "Construction, quarry & mine duty",
-          },
-        ],
+        items: [],
       },
       {
         name: "Rollers & Compactors",
-        image: "/products/roller.jpg",
+        image: "/products/equip-rollers.png",
         caption: "Rollers & Compactors",
         description:
           "Efficient rollers and compactors for soil, landfill and paving works.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Roller / Compactor",
-            image: "/products/roller.jpg",
-            detail: "Soil, landfill & paving compaction",
-          },
-        ],
+        items: [],
       },
       {
         name: "Backhoe Loaders",
-        image: "/products/backhoe.jpg",
+        image: "/products/equip-backhoe-loaders.png",
         caption: "Backhoe Loaders",
         description:
           "Versatile backhoe loaders for construction, landscaping and demolition.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "JCB Backhoe Loader",
-            image: "/products/backhoe.jpg",
-            detail: "Construction, landscaping, demolition & excavation",
-          },
-        ],
+        items: [],
       },
       {
         name: "Telehandlers",
-        image: "/products/telehandler.jpg",
+        image: "/products/equip-telehandlers.png",
         caption: "Telehandlers",
         description:
           "High-productivity telehandlers with best-in-class comfort and reliability.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "JCB Telehandler 540-170",
-            image: "/products/telehandler.jpg",
-            detail: "High productivity with best-in-class comfort & reliability",
-          },
-        ],
+        items: [],
       },
       {
         name: "Skid Steer Loaders",
-        image: "/products/skidsteer.jpg",
+        image: "/products/equip-skid-steers.png",
         caption: "Skid Steer Loaders",
         description:
           "Compact, powerful skid steer loaders built for safety and efficiency.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Skid Steer Loader",
-            image: "/products/skidsteer.jpg",
-            detail: "Safety, reliability & efficiency · powerful & compact",
-          },
-        ],
+        items: [],
       },
       {
         name: "Boom Lifts",
-        image: "/products/boomlift.jpg",
+        image: "/products/equip-boom-lifts.png",
         caption: "Boom Lifts",
         description:
           "Articulated boom lifts with industry-specific standards and the latest lift technology.",
         download: "/downloads/Amirah-Brochure.pdf",
-        items: [
-          {
-            name: "Articulated Boom Lift",
-            image: "/products/boomlift.jpg",
-            detail: "Industry-specific standards & latest lift technology",
-          },
-        ],
+        items: [],
       },
     ],
   },
@@ -190,45 +142,15 @@ const categories: Category[] = [
     download: "/downloads/al-jessur-catalogue.pdf",
     products: [
       {
-        name: "Steel & Rebar",
-        image: "/catalogue/aljessour-steel.jpg",
-        caption: "Steel & Reinforcement",
-        description:
-          "Certified reinforcement steel from authorised UAE and GCC mills.",
-        download: "/downloads/al-jessur-catalogue.pdf",
-        items: [
-          {
-            name: "Deformed Steel Rebar",
-            image: "/products/steel-rebar.jpg",
-            detail: "08–32 mm · AGSI, Jindal, Shadeed, Qatar Steel",
-          },
-          {
-            name: "MS Cold Drawn Steel Bars",
-            image: "/products/steel-msdrawn.jpg",
-            detail: "6–12 mm · Grade BS 4482 / ASTM A1064",
-          },
-          {
-            name: "MS Plain Bars",
-            image: "/products/steel-msplain.jpg",
-            detail: "5.5 / 8 / 10 / 12 mm · Grade SAE 1008",
-          },
-          {
-            name: "BRC Mesh / Wire Mesh",
-            image: "/products/steel-brcmesh.jpg",
-            detail: "BS 4483 / ASTM A1064 · openings 100–250 mm",
-          },
-        ],
-      },
-      {
         name: "Cement & Mortars",
-        image: "/downloads/cements.png",
+        image: "/catalogue/opc-cement.png",
         caption: "Cement & Mortars",
         description:
           "Portland cement and ready-to-use mortars from authorised brands.",
         download: "/downloads/al-jessur-catalogue.pdf",
         items: [
           {
-            name: "OPC",
+            name: "OPC Cement",
             image: "/downloads/opc.png",
             detail: "Ordinary Portland Cement · 50 kg",
           },
@@ -250,8 +172,17 @@ const categories: Category[] = [
         ],
       },
       {
+        name: "Steel & Rebar",
+        image: "/catalogue/steel.png",
+        caption: "Steel & Reinforcement",
+        description:
+          "Certified reinforcement steel from authorised UAE and GCC mills.",
+        download: "/downloads/al-jessur-catalogue.pdf",
+        items: [],
+      },
+      {
         name: "Plywood & MDF",
-        image: "/catalogue/aljessour-plywood.jpg",
+        image: "/catalogue/plywood.png",
         caption: "Plywood & MDF",
         description:
           "Commercial, film-face and marine plywood in standard sizes.",
@@ -260,7 +191,7 @@ const categories: Category[] = [
       },
       {
         name: "Paints & Coatings",
-        image: "/catalogue/aljessour-paint.jpg",
+        image: "/catalogue/paint.png",
         caption: "Paints & Coatings",
         description:
           "Interior and exterior paints and coatings from Jotun and National Paints.",
