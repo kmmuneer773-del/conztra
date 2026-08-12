@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const socials = [
   {
@@ -43,6 +44,45 @@ const socials = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [already, setAlready] = useState(false);
+  const [mailtoFallback, setMailtoFallback] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const value = email.trim();
+    if (!value) return;
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: value }),
+      });
+      if (res.ok) {
+        const data = await res.json().catch(() => null);
+        if (data?.already) setAlready(true);
+        setSubscribed(true);
+        return;
+      }
+      if (res.status !== 501) {
+        setSubscribed(true);
+        return;
+      }
+    } catch {
+      // fall through to mailto
+    }
+
+    setMailtoFallback(true);
+    const subject = encodeURIComponent("Corporate Bulletin Subscription");
+    const body = encodeURIComponent(
+      `Please add the following email to the CONZTRA corporate bulletin mailing list:\n\n${value}`
+    );
+    window.location.href = `mailto:info@conztra.com?subject=${subject}&body=${body}`;
+    setSubscribed(true);
+  };
+
   return (
     <footer className="border-t border-white/10 bg-navy-950">
       <div className="mx-auto max-w-7xl px-6 py-16">
@@ -124,23 +164,35 @@ export default function Footer() {
           <p className="mb-4 text-sm text-zinc-500">
             Subscribe to our corporate bulletins.
           </p>
-          <form
-            className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="email"
-              required
-              placeholder="Enter your email"
-              className="flex-1 rounded-lg border border-white/15 bg-navy-900 px-5 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-secondary/60"
-            />
-            <button
-              type="submit"
-              className="rounded-lg bg-secondary px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-yellow-500"
+          {subscribed ? (
+            <p className="mx-auto max-w-md rounded-lg border border-secondary/30 bg-secondary/10 px-5 py-3 text-sm font-semibold text-secondary">
+              {mailtoFallback
+                ? "Thank you! Your email app is opening — press send to confirm your subscription."
+                : already
+                  ? "You are already subscribed to our corporate bulletins."
+                  : "Thank you! You have been subscribed. A welcome email is on its way to your inbox."}
+            </p>
+          ) : (
+            <form
+              className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
+              onSubmit={handleSubscribe}
             >
-              Subscribe
-            </button>
-          </form>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="flex-1 rounded-lg border border-white/15 bg-navy-900 px-5 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-secondary/60"
+              />
+              <button
+                type="submit"
+                className="rounded-lg bg-secondary px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-yellow-500"
+              >
+                Subscribe
+              </button>
+            </form>
+          )}
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-zinc-500 sm:flex-row">

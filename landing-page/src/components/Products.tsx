@@ -464,7 +464,7 @@ export default function Products() {
                           WhatsApp
                         </a>
                         <Link
-                          href="/contact"
+                          href="/contact#contact-form"
                           className="flex-1 rounded-lg bg-secondary py-2 text-center text-xs font-semibold text-primary transition-colors hover:bg-yellow-500"
                         >
                           Request Quote
@@ -516,7 +516,7 @@ export default function Products() {
                         </button>
                       ) : (
                         <Link
-                          href="/contact"
+                          href="/contact#contact-form"
                           className="flex flex-1 items-center justify-center rounded-lg border border-white/15 py-2 text-xs font-semibold text-white transition-colors hover:border-secondary/50 hover:text-secondary"
                         >
                           Request a Quote

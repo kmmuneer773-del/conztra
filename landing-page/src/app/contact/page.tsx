@@ -224,7 +224,7 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal className="mx-auto max-w-3xl" delay={150}>
-              <div className="rounded-2xl border border-white/10 bg-navy-900 p-8 sm:p-12">
+              <div id="contact-form" className="scroll-mt-24 rounded-2xl border border-white/10 bg-navy-900 p-8 sm:p-12">
                 <h2 className="mb-3 font-heading text-2xl font-bold text-white">
                   Send Us a <span className="text-gold-gradient">Message</span>
                 </h2>

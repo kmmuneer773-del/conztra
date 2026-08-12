@@ -89,7 +89,7 @@ export default function Hero() {
           <Reveal delay={400}>
             <div className="flex flex-col items-start gap-4 sm:flex-row">
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="group rounded-lg bg-gradient-to-r from-secondary to-yellow-500 px-8 py-3 text-sm font-semibold text-primary shadow-lg shadow-secondary/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-secondary/40"
               >
                 Request a Quote
