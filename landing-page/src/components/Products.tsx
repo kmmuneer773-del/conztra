@@ -299,14 +299,6 @@ const categories: Category[] = [
         download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
         items: [],
       },
-      {
-        name: "Corporate Wears",
-        image: "/catalogue/kiwi-corporate-v5.jpg",
-        description:
-          "Tailored corporate and executive wear for a sharp professional look.",
-        download: "/downloads/KIWI%20-%20PROFILE-1.pdf",
-        items: [],
-      },
     ],
   },
 ];
